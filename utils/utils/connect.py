@@ -41,3 +41,10 @@ def get_todays_fixtures(API_KEY, league):
     response = api_call(API_KEY, new_url)
     if response is not None:
         return response
+
+def get_live_fixtures(API_KEY, ):
+    new_url = url + '/fixtures?live=all'
+
+    response = api_call(API_KEY, new_url)
+    if response is not None:
+        return response
