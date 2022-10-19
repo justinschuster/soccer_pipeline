@@ -2,4 +2,5 @@ import config
 
 from utils.utils import connect
 
-connect.api_connect(config.API_KEY)
+# Testing the api key connect
+fixtures = connect.get_todays_fixtures(config.API_KEY)
