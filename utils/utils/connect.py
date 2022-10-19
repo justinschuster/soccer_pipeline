@@ -30,16 +30,10 @@ def api_call(API_KEY, url):
     else:
         return response
 
-def get_todays_fixtures(API_KEY):
+def get_todays_fixtures(API_KEY, league):
     # TODO: response status returns succesfull even if league or year doesn't yield results
     # Need to program a check for that
     # need to get list of season and league id's
-
-    payload = {}
-    headers = {
-            'x-rapidapi-key': API_KEY,
-            'x-rapidapi-host': "v3.football.api-sports.io" 
-            }
 
     current_year = date.today().year
     new_url = url + f'/fixtures/rounds?season={current_year}&league=4335'
